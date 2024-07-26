@@ -244,6 +244,12 @@
   </div>
 
   <script>
+    // Function to validate email
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
     // Check if the user has already subscribed
     if (!localStorage.getItem("subscribed")) {
       // Display the popup if the user has not subscribed
@@ -253,6 +259,11 @@
     // Function to subscribe and hide the popup
     function subscribe() {
       var email = document.getElementById("emailInput").value;
+
+      if (!validateEmail(email)) {
+        alert("Invalid email.");
+        return;
+      }
 
       // Perform any necessary subscription logic here
       // For this example, we'll simply save the email in localStorage
