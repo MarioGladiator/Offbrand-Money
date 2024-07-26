@@ -13,6 +13,140 @@
         height: auto; /* Automatically adjust height based on the width */
         margin-right: 10px; /* Add spacing between logo and header text */
       }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: right;
+      }
+
+      .button {
+        background-color: #000000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      /* Additional CSS for the audio button */
+      #play-music {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      #play-music:hover {
+        background-color: #45a049;
+      }
+
+      .contact-section {
+        background-color: rgb(50, 49, 49);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .social-links {
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        margin-right: 10px;
+      }
+
+      /* Overlay styles */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      /* Popup box styles */
+      .popup-box {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 400px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .popup-box h2 {
+        margin-top: 0;
+      }
+
+      .popup-box p {
+        margin-bottom: 20px;
+      }
+
+      .popup-box input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .popup-box button {
+        background-color: #14a6cf;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Cookie acceptance box styles */
+      .cookie-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 400px;
+      }
+
+      .cookie-box-text {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .cookie-box-buttons {
+        display: flex;
+        align-items: center;
+      }
+
+      .cookie-box-buttons button {
+        background-color: #000000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
     </style>
 </head>
 <body>
@@ -30,41 +164,7 @@
       </ul>
     </nav>
   </header>
-  
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .header {
-      background-color: #f2f2f2;
-      padding: 10px;
-      text-align: right;
-    }
-    
-    .button {
-      background-color: #000000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-  </style>
 
-  <script>
-    // Function to redirect to the login page
-    function redirectToLogin() {
-      window.location.href = "login.html";
-    }
-
-    // Function to redirect to the signup page
-    function redirectToSignup() {
-      window.location.href = "signup.html";
-    }
-  </script>
-    
   <main>
     <section>
       <h1>Offbrand Money</h1>
@@ -77,25 +177,17 @@
        from your bank in-app. Business owners are free to use Offbrand Money Business. If you would like to hear more about OBM Business, head to offbrandmoney.com</p>
        <h1 style="font-size: larger;">Where can I create my free account?</h1>
        <p>You can create your free Offbrand account <a style="color: rgb(50, 49, 49);" href="signup.html">here</a> or if you already have created one, sign in <a  style="color: rgb(50, 49, 49)" href="login.html">here</a></p>
+       <!-- Added Play Music Button -->
+       <button id="play-music">Play Music</button>
+       <!-- Background music element -->
+       <audio id="background-music" loop>
+           <source src="calm-background-for-video-121519.mp3" type="audio/mpeg">
+           Your browser does not support the audio element.
+       </audio>
     </section>
   </main>
-  <footer>
-    <style>
-      .contact-section {
-        background-color: rgb(50, 49, 49);
-        padding: 20px;
-        text-align: center;
-      }
-      
-      .social-links {
-        margin-top: 20px;
-      }
-      
-      .social-links a {
-        margin-right: 10px;
-      }
-    </style>
 
+  <footer>
     <div class="contact-section">
       <h2>Contact Us</h2>
       <p>If you have any questions or inquiries, please feel free to reach out to us.</p>
@@ -111,70 +203,42 @@
       </div>
     </div>
 
-    <style>
-      /* Overlay styles */
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-      }
-      
-      /* Popup box styles */
-      .popup-box {
-        background-color: #fff;
-        padding: 20px;
-        max-width: 400px;
-        text-align: center;
-        border-radius: 8px;
-      }
-      
-      .popup-box h2 {
-        margin-top: 0;
-      }
-      
-      .popup-box p {
-        margin-bottom: 20px;
-      }
-      
-      .popup-box input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      
-      .popup-box button {
-        background-color: #14a6cf;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-    </style>
+    <div class="overlay" id="overlay">
+      <!-- Popup Box -->
+      <div class="popup-box">
+        <img src="https://th.bing.com/th/id/R.38b171206d345d60a2bfcb18875af470?rik=JoVHqs1NojsGlA&riu=http%3a%2f%2fwww.cookcountylandbank.org%2fwp-content%2fuploads%2f2014%2f09%2fNews-Icon.jpg&ehk=UhL7SH07g5h8uCLwjrnNy9Zg7OynPQc2Kxv4tJeF6t4%3d&risl=&pid=ImgRaw&r=0" alt="" width="100px">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Stay updated with our latest news and offers.</p>
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <button onclick="subscribe()">Subscribe</button>
+        <button class="back-button" onclick="goBack()">Back</button>
+      </div>
+    </div>
   </footer>
 
-  <div class="overlay" id="overlay">
-    <!-- Popup Box -->
-    <div class="popup-box">
-      <img src="https://th.bing.com/th/id/R.38b171206d345d60a2bfcb18875af470?rik=JoVHqs1NojsGlA&riu=http%3a%2f%2fwww.cookcountylandbank.org%2fwp-content%2fuploads%2f2014%2f09%2fNews-Icon.jpg&ehk=UhL7SH07g5h8uCLwjrnNy9Zg7OynPQc2Kxv4tJeF6t4%3d&risl=&pid=ImgRaw&r=0" alt="" width="100px">
-      <h2>Subscribe to our Newsletter</h2>
-      <p>Stay updated with our latest news and offers.</p>
-      <input type="email" id="emailInput" placeholder="Enter your email" required>
-      <button onclick="subscribe()">Subscribe</button>
-      <button class="back-button" onclick="goBack()">Back</button>
+  <div class="cookie-box" id="cookieBox">
+    <div class="cookie-box-text">
+      <p>This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our use of cookies.</p>
+    </div>
+    <div class="cookie-box-buttons">
+      <button onclick="acceptCookies()">Accept</button>
+      <button onclick="declineCookies()">Decline</button>
     </div>
   </div>
 
   <script>
+    // Function to play/pause music
+    document.getElementById('play-music').addEventListener('click', function() {
+      var audio = document.getElementById('background-music');
+      if (audio.paused) {
+        audio.play();
+        this.textContent = 'Pause Music';
+      } else {
+        audio.pause();
+        this.textContent = 'Play Music';
+      }
+    });
+
     // Function to validate email
     function validateEmail(email) {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -228,59 +292,7 @@
       // Display the popup if the user has not subscribed
       document.getElementById("overlay").style.display = "flex";
     }
-  </script>
 
-  <style>
-    /* Cookie acceptance box styles */
-    .cookie-box {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 400px;
-    }
-    
-    .cookie-box-text {
-      flex: 1;
-      margin-right: 20px;
-    }
-    
-    .cookie-box-buttons {
-      display: flex;
-      align-items: center;
-    }
-    
-    .cookie-box-buttons button {
-      background-color: #000000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-left: 10px;
-    }
-  </style>
-
-  <!-- Cookie Acceptance Box -->
-  <div class="cookie-box" id="cookieBox">
-    <div class="cookie-box-text">
-      <p>This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our use of cookies.</p>
-    </div>
-    <div class="cookie-box-buttons">
-      <button onclick="acceptCookies()">Accept</button>
-      <button onclick="declineCookies()">Decline</button>
-    </div>
-  </div>
-
-  <script>
     // Function to set a cookie with the given name, value, and expiration in days
     function setCookie(name, value, days) {
       var expires = "";
