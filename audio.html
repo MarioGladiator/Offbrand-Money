@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Music Example</title>
+    <title>Offbrand Money</title>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    
-    <!-- Background music -->
+    <h1>Welcome to Offbrand Money</h1>
+
+    <!-- Background music element -->
     <audio id="background-music" loop>
         <source src="calm-background-for-video-121519.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <button onclick="playMusic()">Play Music</button>
+    <!-- Music control button -->
+    <button id="play-music">Play Music</button>
 
-    <!-- JavaScript to control audio -->
     <script>
-        function playMusic() {
+        // JavaScript to play music
+        document.getElementById('play-music').addEventListener('click', function() {
             var audio = document.getElementById('background-music');
             audio.play();
-        }
+        });
     </script>
+
+    <!-- Rest of your content -->
+
 </body>
 </html>
