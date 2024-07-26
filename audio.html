@@ -9,12 +9,19 @@
     <h1>Welcome to My Website</h1>
     
     <!-- Background music -->
-    <audio id="background-music" autoplay loop>
+    <audio id="background-music" loop>
         <source src="calm-background-for-video-121519.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Content of your website -->
+    <button onclick="playMusic()">Play Music</button>
 
+    <!-- JavaScript to control audio -->
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
